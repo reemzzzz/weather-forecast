@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/142480f679.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head> 
+<body data-bs-theme="dark">
+    <!-- header --->
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container d-flex justify-content-between">
+                <div class="nav-left d-flex gap-2">
+                    <a href="">
+                        <img class="logo-img" src="imgs/logo@2x.png" alt="">
+                    </a>
+                    <div class="logo-text">
+                        <h1 class="text-white fs-6 mb-0 fw-medium">Weather</h1>
+                        <p class="fw-light">tagline goes here</p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="nav-right collapse navbar-collapse flex-grow-0">
+                    <ul class="menu list-unstyled d-flex  gap-5">
+                        <li class="menu-item  current-menu-item"><a class="menu-text text-decoration-none px-3 py-1" href='/'>Home</a></li>
+                        <li class="menu-item "><a class="menu-text text-decoration-none px-3 py-1" href="#">News</a></li>
+                        <li class="menu-item "><a class="menu-text text-decoration-none px-3 py-1" href="#">Live cameras</a></li>
+                        <li class="menu-item "><a class="menu-text text-decoration-none px-3 py-1" href="#">Photos</a></li>
+                        <li class="menu-item "><a class="menu-text text-decoration-none px-3 py-1" href='/contact'>Contact</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+        <main>
+            <div class="container">
+                <div class="input-group mb-3 position-relative w-50 m-auto mb-5">
+                    <input id="search-input" type="text" class="form-control rounded-5  p-2 border-3 z-0" placeholder="Find your location... " aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-dark rounded-5 px-5 py-2 position-absolute end-0 bg-info  z-2" type="button" id="button-addon2">Find</button>
+                </div>
+                <div class="row flex-wrap">
+                    <div class="col-md-4 one p-0">
+                        <div class="card-title  d-flex justify-content-between py-1 px-4 rounded-top-3">
+                            <p id="today-name">Today</p>
+                            <!-- <p id="today-date" class="date">12July</p> -->
+                             <div class="date">
+                                <span id="today-date-number" >12</span>
+                                <span id="today-date-month">July</span>
+                             </div>
+                        </div>
+                        <div class="temp-data py-2 px-4 rounded-bottom-3">
+                            <p id="today-location" class="location-data">Cairo</p>
+                            <h1 id="today-temp" class="temp fw-bolder w-100">32.2°C</h1>
+                            <div  class="weather-icon">
+                                <img id="today-condition-img" class="w-25" src="imgs/113.webp" alt="">
+                            </div>
+                            <p  id="today-condition-text" class="text-info">Clear</p>
+                            <ul class="list-unstyled d-flex gap-4">
+                                <li>
+                                    <i  class="fa fa-umbrella"></i>
+                                    <span id="humidity">20%</span>
+                                </li>
+                                <li>
+                                    <i  class="fa fa-wind"></i> 
+                                    <span id="wind">18km/h</span>
+                                </li>
+                                <li>
+                                    <i  class="fa fa-compass"></i> 
+                                    <span id="wind-direction">East</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 two text-center  p-0 d-flex flex-column">
+                        <div class="card-title py-1 px-4 rounded-top-3">
+                            <p class="next-day-name">Tomorrow</p>
+                        </div>
+                        <div class="temp-data py-2 px-4 rounded-bottom-3 flex-grow-1 align-content-center">
+                            
+                            <div class="weather-icon">
+                                <img class="next-condition-img w-25" src="imgs/113 (1).webp" alt="">
+                            </div>
+                            <div class="temp">
+                                <h3 class="next-max-temp">39.6°C</h3>
+                                <p  class="text-secondary fw-light next-min-temp"> 28.1°C</p>
+                            </div>
+                            <p class="next-condition-text text-info">Sunny</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-4 three text-center p-0 d-flex flex-column">
+                        <div class="card-title py-1 px-4 rounded-top-3">
+                            <p class="next-day-name">After Tomorrow</p>
+                        </div>
+                        <div class="temp-data py-2 px-4 rounded-bottom-3 flex-grow-1 align-content-center">
+                            
+                            <div class="weather-icon">
+                                <img class="next-condition-img w-25" src="imgs/113 (1).webp" alt="">
+                            </div>
+                            <div class="temp">
+                                <h3 class="next-max-temp">39.6°C</h3>
+                                <p class="text-secondary fw-light next-min-temp"> 28.1°C</p>
+                            </div>
+                            <p class="next-condition-text text-info">Sunny</p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <!-- footer -->
+        <footer>
+            <div class="container p-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-left">
+                            <div class="input-group mb-3 position-relative w-100  mb-5 ">
+                                <input type="email" class="form-control rounded-5  p-2 border-3 z-0" placeholder="Enter your email to subscribe... " aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-dark rounded-5 px-5 py-2 position-absolute end-0 bg-info  z-2" type="button" id="button-addon2">Subscribe</button>
+                            </div>
+                            <p class="text-secondary fw-light">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <div class="footer-right position-absolute  end-50">
+                            <ul class="list-unstyled d-flex gap-3 ">
+                                <li class="list-item">
+                                    <a class="text-info" href=""><i class="fa fa-facebook-f p-2"></i></a>
+                                </li>
+                                <li class="list-item">
+                                 <a class="text-info" href="">   <i class="fa fa-twitter p-2"></i></a>
+                                </li>
+                                <li class="list-item">
+                                   <a class="text-info" href=""> <i class="fa fa-instagram p-2"></i></a>
+                                </li>
+                                <li class="list-item">
+                                   <a class="text-info" href=""> <i class="fa fa-pinterest p-2"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </footer>
+    <script src="js/main.js"></script>
+   <script src="js/jquery.min.js"></script>
+   
+</body>
+</html>

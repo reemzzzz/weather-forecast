@@ -1,0 +1,77 @@
+.container{
+    margin: auto;
+    padding: 20px 50px;
+}
+
+
+.logo-img{
+    width: 4rem;
+}
+
+.logo-text p{
+    font-size: small;
+}
+
+.menu-text{
+    color: white;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.menu-text:hover{
+    color: rgb(17, 135, 207);
+    border: 2px solid rgb(17, 135, 207);
+    border-radius: 30px;
+}
+
+
+
+
+/* --------------------- main section ----------------- */
+
+
+main{
+    background-image: url(../imgs/banner.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;  
+    background-position: center center;
+
+}
+
+.one .card-title, .three .card-title{
+  background-color: #2D303D;
+}
+
+.one .temp-data, .three .temp-data{
+    
+    background-color: #323544;
+}
+
+.one .temp{
+    font-size: 60px;
+}
+
+.two .card-title{
+    background-color: #222530;
+}
+
+.two .temp-data{
+    background-color: #262936;
+}
+
+
+
+
+
+/* ----------------------- footer ------------------------- */
+
+.list-item i{
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.list-item i:hover{
+    color: white;
+    background-color: rgb(17, 135, 207);
+}
